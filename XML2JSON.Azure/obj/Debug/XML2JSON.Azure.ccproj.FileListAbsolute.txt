@@ -1,2 +1,0 @@
-D:\Code\SMS\XML2JSON\XML2JSON.Azure\bin\Debug\ServiceConfiguration.cscfg
-D:\Code\SMS\XML2JSON\XML2JSON.Azure\bin\Debug\ServiceDefinition.csdef

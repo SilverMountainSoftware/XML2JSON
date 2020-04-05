@@ -1,2 +1,0 @@
-D:\Code\SMS\XML2JSON\XML2JSON.Web.OWIN\obj\Debug\XML2JSON.Web.OWIN.csprojAssemblyReference.cache
-D:\Code\SMS\XML2JSON\XML2JSON.Web.OWIN\obj\Debug\XML2JSON.Web.OWIN.csproj.CoreCompileInputs.cache
