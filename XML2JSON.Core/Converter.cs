@@ -12,7 +12,7 @@ namespace XML2JSON.Core
     /// <summary>
     /// Class to handle xml -> json conversion
     /// </summary>
-    public static class Converter
+    public class Converter
     {
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace XML2JSON.Core
         /// </summary>
         /// <param name="xml"></param>
         /// <returns></returns>
-        public static async Task<string> ConvertToJsonAsync(string xml, List<string> elementsToMakeArrays)
+        public async Task<string> ConvertToJsonAsync(string xml, List<string> elementsToMakeArrays)
         {
             return await Task<string>.Factory.StartNew(() => ConvertToJson(xml, elementsToMakeArrays));
         }
@@ -30,7 +30,7 @@ namespace XML2JSON.Core
         /// </summary>
         /// <param name="xml">xml data as string</param>
         /// <returns>json data as string</returns>
-        public static string ConvertToJson(string xml, List<string> elements)
+        public string ConvertToJson(string xml, List<string> elements)
         {
             var doc = new XmlDocument();
             doc.LoadXml(xml);
@@ -62,7 +62,7 @@ namespace XML2JSON.Core
             return strippedJsonText;
         }
 
-        private static JToken MakeElementArray(JToken jToken)
+        private JToken MakeElementArray(JToken jToken)
         {
             List<object> list = new List<object>();
 
@@ -78,7 +78,7 @@ namespace XML2JSON.Core
             return JToken.FromObject(list);
         }
 
-        private static JToken FixOneElement(string element, JToken jTokenMain)
+        private JToken FixOneElement(string element, JToken jTokenMain)
         {
             JToken jToken = jTokenMain[element];
 
@@ -106,7 +106,7 @@ namespace XML2JSON.Core
         }
 
 
-        private static string FixArrayElements(List<string> elements, string json)
+        private string FixArrayElements(List<string> elements, string json)
         {
             JToken jTokenMain = JToken.Parse(json);
 

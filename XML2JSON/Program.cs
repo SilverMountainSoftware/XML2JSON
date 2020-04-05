@@ -52,7 +52,8 @@ namespace XML2JSON
 
             Console.WriteLine("Loaded input xml from '{0}'", inputXml);
 
-            var json = Converter.ConvertToJson(xml, elements);
+            var converter = new Converter();
+            var json = converter.ConvertToJson(xml, elements);
 
             Console.WriteLine("Converted xml to json");
 

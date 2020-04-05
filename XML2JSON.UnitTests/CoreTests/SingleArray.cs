@@ -57,8 +57,9 @@ namespace XML2JSON.UnitTests
 }";
             var elements = new List<string>();
             elements.Add("genre");
-            
-            var json = Converter.ConvertToJson(xml1, elements);
+
+            var converter = new Converter();
+            var json = converter.ConvertToJson(xml1, elements);
 
             Assert.Equal(expectedJson, json,  ignoreWhiteSpaceDifferences: true);
         }
@@ -87,7 +88,8 @@ namespace XML2JSON.UnitTests
             var elements = new List<string>();
             elements.Add("genre");
 
-            var json = await Converter.ConvertToJsonAsync(xml1, elements);
+            var converter = new Converter();
+            var json = await converter.ConvertToJsonAsync(xml1, elements);
 
             Assert.Equal(expectedJson, json, ignoreWhiteSpaceDifferences: true);
         }
@@ -119,7 +121,8 @@ namespace XML2JSON.UnitTests
             var elements = new List<string>();
             elements.Add("genre");
 
-            var json = Converter.ConvertToJson(xml2, elements);
+            var converter = new Converter();
+            var json = converter.ConvertToJson(xml2, elements);
 
             Assert.Equal(expectedJson, json, ignoreWhiteSpaceDifferences: true);
         }
