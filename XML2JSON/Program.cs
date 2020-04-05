@@ -10,13 +10,17 @@ namespace XML2JSON
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Assembly.GetExecutingAssembly().FullName);
+            string progName = AppDomain.CurrentDomain.FriendlyName;
+
+            Console.WriteLine(progName);
 
             if (args.Length < 2)
             {
-                Console.WriteLine("Usage: XML2JSON.exe input.xml output.json [elements.txt]");
-                return;
+                Console.WriteLine($"Usage:\n {progName} input.xml output.json [elements.txt]");
+                Environment.Exit(-1);
             }
+
+            Console.WriteLine("Running {0}...", progName);
 
             string inputXml;
             string outputJson;
