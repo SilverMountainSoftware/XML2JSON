@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML2JSON", "XML2JSON\XML2JSON.csproj", "{2008DA79-F037-48D0-BF46-3A46E4D1F3CF}"
-EndProject
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{032A1C6C-21BD-4D92-872B-59BB69B5888F}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -12,14 +12,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{032A1C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleData", "SampleData", "{85C2FD8E-5035-4C9D-A081-558664F5EFFC}"
 	ProjectSection(SolutionItems) = preProject
+		book.xml = book.xml
 		SampleData\books.xml = SampleData\books.xml
+		SampleData\elements.txt = SampleData\elements.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML2JSON", "XML2JSON\XML2JSON.csproj", "{2008DA79-F037-48D0-BF46-3A46E4D1F3CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML2JSON.Core", "XML2JSON.Core\XML2JSON.Core.csproj", "{6F044248-9A79-4864-8163-A1B18BCC5A16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML2JSON.Web.OWIN", "XML2JSON.Web.OWIN\XML2JSON.Web.OWIN.csproj", "{A4316291-BED8-4315-BE70-7D8046AB4A5C}"
-EndProject
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "XML2JSON.Azure", "XML2JSON.Azure\XML2JSON.Azure.ccproj", "{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{652EC2AD-7890-4052-975E-AEEF2DB5B850}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,28 +56,11 @@ Global
 		{6F044248-9A79-4864-8163-A1B18BCC5A16}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6F044248-9A79-4864-8163-A1B18BCC5A16}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6F044248-9A79-4864-8163-A1B18BCC5A16}.Release|x86.ActiveCfg = Release|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{A4316291-BED8-4315-BE70-7D8046AB4A5C}.Release|x86.ActiveCfg = Release|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{7974C5EE-EC21-4DC8-9494-E55F6E4CF504}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9043CB5A-2199-4867-AC9D-22710F9B2987}
 	EndGlobalSection
 EndGlobal

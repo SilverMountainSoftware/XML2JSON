@@ -1,0 +1,12 @@
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.exe.config
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.exe
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.pdb
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.Core.dll
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\Newtonsoft.Json.dll
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.Core.pdb
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\Newtonsoft.Json.xml
+D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.csprojAssemblyReference.cache
+D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.csproj.CoreCompileInputs.cache
+D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.csproj.CopyComplete
+D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.exe
+D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.pdb
