@@ -7,11 +7,11 @@ It uses the JSON.NET library.
 
 ## Usage:
 
-	XML2JSON.exe input.xml output.json  [elements.txt]
+	XML2JSON.exe input.xml output.json [elements.txt]
 
 ## Example elements.txt:
-genre
-book
+    genre
+    book
 	
 ## Example XML Input:
 
@@ -30,26 +30,26 @@ book
 	
 ## Example Output:
 
-{
-  "catalog": {
-    "book": [
-      {
-        "id": "bk101",
-        "author": "Gambardella, Matthew",
-        "title": "XML Developer's Guide",
-        "genre": [
+    {
+      "catalog": {
+        "book": [
           {
-            "id": 1,
-            "text": "Computer"
+            "id": "bk101",
+            "author": "Gambardella, Matthew",
+            "title": "XML Developer's Guide",
+            "genre": [
+              {
+                "id": 1,
+                "text": "Computer"
+              }
+            ],
+            "price": 44.95,
+            "publish_date": "2000-10-01",
+            "description": "An in-depth look at creating applications \r\n      with XML."
           }
-        ],
-        "price": 44.95,
-        "publish_date": "2000-10-01",
-        "description": "An in-depth look at creating applications \r\n      with XML."
+        ]
       }
-    ]
-  }
-}
+    }
 	
 ## Note
 
