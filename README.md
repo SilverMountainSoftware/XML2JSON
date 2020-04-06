@@ -1,6 +1,6 @@
 # XML2JSON
 
-XML2JSON convert XML files to JSON using an XDS file to make a list of single XML elements into a JSON array where necessary.
+XML2JSON: convert XML files to JSON using an XDS file to make a list of single XML elements into a JSON array where necessary.
 
 It uses the JSON.NET library.
 
@@ -54,5 +54,5 @@ Assuming that input.xds has a complex element types of genre and book, with maxO
 	
 ## Note
 
-So, while there is just one "book" element and one "genre" element, because they are included in the elements.txt file, they are 
-made in JSON arrays. This is helpful because Newtonsoft cannot use either XSD or JSON Schema files.
+So, while there is just one "book" element and one "genre" element, because they are included in the elements list, they are 
+made into JSON arrays. This is helpful because Newtonsoft cannot use either XSD or JSON Schema files.
