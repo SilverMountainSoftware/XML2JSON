@@ -1,8 +1,9 @@
-﻿using System.IO;
-using XML2JSON.Core;
-using System;
-using System.Reflection;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using XML2JSON.Core;
+using XML2JSON.Parsing.XsdToObject;
 
 namespace XML2JSON
 {
@@ -14,31 +15,25 @@ namespace XML2JSON
 
             Console.WriteLine(progName);
 
-            if (args.Length < 2)
+            if (args.Length < 3)
             {
-                Console.WriteLine($"Usage:\n {progName} input.xml output.json [elements.txt]");
+                Console.WriteLine($"Usage:\n {progName} input.xml input.xsd output.json");
                 Environment.Exit(-1);
             }
 
             Console.WriteLine("Running {0}...", progName);
 
             string inputXml;
+            string inputXsd;
             string outputJson;
-            var listFile = "";
-            var elements = new List<string>();
 
             inputXml = args[0];
-            outputJson = args[1];
-
-            if (args.Length > 2)
-            {
-                var fileContents = File.ReadAllLines(args[2]);
-                elements = new List<string>(fileContents);
-            }
+            inputXsd = args[1];
+            outputJson = args[2];
 
             Console.WriteLine("input xml: {0}", inputXml);
+            Console.WriteLine("input of xsd: {0}", inputXsd);
             Console.WriteLine("output json: {0}", outputJson);
-            Console.WriteLine("list of arrays: {0}", listFile);
 
             string xml;
 
@@ -47,6 +42,22 @@ namespace XML2JSON
                 using (var inputStreamReader = new StreamReader(inputFileStream))
                 {
                     xml = inputStreamReader.ReadToEnd();
+                }
+            }
+
+            var generator = new ClassGenerator();
+
+            using (Stream stream = File.OpenRead(inputXsd))
+                generator.Parse(stream);
+
+            var classes = generator.Generate();
+
+            var elements = new HashSet<string>();
+            foreach (var item in classes)
+            {
+                foreach (var element in item.Elements.Where(e => e.IsList))
+                {
+                    elements.Add(element.XmlName);
                 }
             }
 

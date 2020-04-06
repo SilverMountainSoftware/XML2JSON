@@ -10,3 +10,5 @@ D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.csproj.CoreCompileInputs.ca
 D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.csproj.CopyComplete
 D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.exe
 D:\Code\SMS\XML2JSON\XML2JSON\obj\x86\Debug\XML2JSON.pdb
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.Parsing.XsdToObject.dll
+D:\Code\SMS\XML2JSON\XML2JSON\bin\Debug\XML2JSON.Parsing.XsdToObject.pdb

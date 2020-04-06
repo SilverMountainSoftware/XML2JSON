@@ -1,19 +1,31 @@
 {
-  "catalog": {
-    "book": [
+  "vehicles": {
+    "car": [
       {
-        "id": "bk101",
-        "author": "Gambardella, Matthew",
-        "title": "XML Developer's Guide",
-        "genre": [
-          {
-            "id": 1,
-            "text": "Computer"
+        "brand": "BMW",
+        "productionDate": "2008-10-25",
+        "exactProductionDate": "2002-05-30T09:30:10Z",
+        "color": {
+          "hue": "black",
+          "description": {
+            "descriptionType": "thisIsTheType",
+            "text": "This is the text"
           }
-        ],
-        "price": 44.95,
-        "publish_date": "2000-10-01",
-        "description": "An in-depth look at creating applications \r\n      with XML."
+        },
+        "manufacturer": {
+          "nameType": "MajorType",
+          "text": "BMW UK"
+        },
+        "modelVersion": 2.1
+      },
+      {
+        "brand": "Honda",
+        "color": {
+          "hue": "red",
+          "rgb": 16711680
+        },
+        "manufacturer": "UK Manufacturing Ltd",
+        "modelVersion": 1.0
       }
     ]
   }

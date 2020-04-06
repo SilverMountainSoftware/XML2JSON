@@ -1,15 +1,16 @@
 # XML2JSON
 
-XML2JSON is a simple command line tool for converting XML files to JSON with the option to make a list of
-single XML elements into a JSON array.
+XML2JSON convert XML files to JSON using an XDS file to make a list of single XML elements into a JSON array where necessary.
 
 It uses the JSON.NET library.
 
 ## Usage:
 
-	XML2JSON.exe input.xml output.json [elements.txt]
+	XML2JSON.exe input.xml input.xsd output.json
 
-## Example elements.txt:
+## Example input.xds:
+Assuming that input.xds has a complex element types of genre and book, with maxOccues > 1, that will give as a list of elements of:
+
     genre
     book
 	

@@ -30,7 +30,7 @@ namespace XML2JSON.Core
         /// </summary>
         /// <param name="xml">xml data as string</param>
         /// <returns>json data as string</returns>
-        public string ConvertToJson(string xml, List<string> elements)
+        public string ConvertToJson(string xml, ICollection<string> elements)
         {
             var doc = new XmlDocument();
             doc.LoadXml(xml);
@@ -80,11 +80,23 @@ namespace XML2JSON.Core
 
         private JToken FixOneElement(string element, JToken jTokenMain)
         {
-            JToken jToken = jTokenMain[element];
-
-            if (jToken != null)
+            var tryGood = true;
+            try
             {
-                jTokenMain[element] = MakeElementArray(jToken);
+                JToken jToken = jTokenMain[element];
+                if (jToken == null)
+                {
+                    tryGood = false;
+                }
+            }
+            catch (System.Exception)
+            {
+                tryGood = false;
+            }
+
+            if (tryGood)
+            {
+                jTokenMain[element] = MakeElementArray(jTokenMain[element]);
             }
             else
             {
@@ -106,7 +118,7 @@ namespace XML2JSON.Core
         }
 
 
-        private string FixArrayElements(List<string> elements, string json)
+        private string FixArrayElements(ICollection<string> elements, string json)
         {
             JToken jTokenMain = JToken.Parse(json);
 

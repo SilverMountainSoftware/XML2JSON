@@ -55,8 +55,10 @@ namespace XML2JSON.UnitTests
     }
   }
 }";
-            var elements = new List<string>();
-            elements.Add("genre");
+            var elements = new List<string>
+            {
+                "genre"
+            };
 
             var converter = new Converter();
             var json = converter.ConvertToJson(xml1, elements);
@@ -85,8 +87,10 @@ namespace XML2JSON.UnitTests
     }
   }
 }";
-            var elements = new List<string>();
-            elements.Add("genre");
+            var elements = new List<string>
+            {
+                "genre"
+            };
 
             var converter = new Converter();
             var json = await converter.ConvertToJsonAsync(xml1, elements);
@@ -118,8 +122,10 @@ namespace XML2JSON.UnitTests
     }
   }
 }";
-            var elements = new List<string>();
-            elements.Add("genre");
+            var elements = new List<string>
+            {
+                "genre"
+            };
 
             var converter = new Converter();
             var json = converter.ConvertToJson(xml2, elements);
